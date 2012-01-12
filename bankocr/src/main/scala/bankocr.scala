@@ -41,7 +41,7 @@ object Commons {
 import Commons._
 
 object BankOCR {
-  // The haskell solution: 
+  // A haskell solution: 
 
   // main = interact (\x → parse x ⧺ "\n")
 
@@ -91,8 +91,8 @@ object BankOCR {
 
   def numeralMap(numerals: String): Map[String, Int] = {
     val groups = toCharMatrix ∘ transpose ∘ grouped(4) 
-    val numeralStrs = groups(numerals) ∘ (_.tail) ∘ fmtMatrixCM
-    (numeralStrs zip (0 to 9)).toMap
+    val numeralStrs = groups(numerals) ∘ tail ∘ fmtMatrixCM
+    Map((numeralStrs zip (0 to 9):_*))
   }
 
   def parse: String => List[Int] = 
