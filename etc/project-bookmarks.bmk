@@ -1,0 +1,36 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(#1=(#("src/overview" 0 12
+      (bmkp-full-record #1#))
+    (buffer-name . "src")
+    (front-context-string . "BitBucket.scala\n")
+    (rear-context-string . "011-07-08 18:14 ")
+    (front-context-region-string)
+    (rear-context-region-string)
+    (visits . 0)
+    (time . #2=(20191 39212 325449))
+    (created . #2#)
+    (position . 999)
+    (end-position . 999)
+    (filename . "/home/saunders/projects/scala-genesis/src/")
+    (dired-directory . "~/projects/scala-genesis/src/")
+    (dired-marked)
+    (dired-switches . "-ABl")
+    (dired-subdirs
+     ("/home/saunders/projects/scala-genesis/src/test/scala/cc/acs/util/")
+     ("/home/saunders/projects/scala-genesis/src/test/scala/cc/acs/")
+     (#3="/home/saunders/projects/scala-genesis/src/test/scala/cc/")
+     (#4="/home/saunders/projects/scala-genesis/src/test/scala/")
+     (#5="/home/saunders/projects/scala-genesis/src/test/resources/")
+     (#6="/home/saunders/projects/scala-genesis/src/test/")
+     ("/home/saunders/projects/scala-genesis/src/main/scala/cc/logicdsl/")
+     ("/home/saunders/projects/scala-genesis/src/main/scala/cc/annotations/")
+     ("/home/saunders/projects/scala-genesis/src/main/scala/cc/acs/")
+     (#7="/home/saunders/projects/scala-genesis/src/main/scala/cc/")
+     (#8="/home/saunders/projects/scala-genesis/src/main/scala/")
+     (#9="/home/saunders/projects/scala-genesis/src/main/"))
+    (dired-hidden-dirs "/home/saunders/projects/scala-genesis/src/" #9# #8# #7# #6# #5# #4# #3#)
+    (handler . bmkp-jump-dired))
+)

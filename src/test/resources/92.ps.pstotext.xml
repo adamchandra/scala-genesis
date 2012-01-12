@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<document>
+<page n="1">
+<line><tbox llx="108" lly="688" urx="301" ury="702" f="1"><![CDATA[[ Whitehead, 1992 ] Steven Whitehead. ]]></tbox><tbox llx="299" lly="687" urx="507" ury="701" f="2"><![CDATA[Reinforcement Learning for the Adaptive ]]></tbox></line>
+<line><tbox llx="120" lly="674" urx="287" ury="688" f="2"><![CDATA[Control of Perception and Action. ]]></tbox><tbox llx="282" lly="674" urx="507" ury="688" f="1"><![CDATA[PhD thesis, Department of Computer Science, ]]></tbox></line>
+<line><tbox llx="120" lly="660" urx="274" ury="674" f="1"><![CDATA[University of Rochester, 1992. ]]></tbox></line>
+<line><tbox llx="108" lly="639" urx="508" ury="652" f="1"><![CDATA[[ Yee, 1992 ] Richard Yee. Abstraction in control learning. Technical Report 92-16, ]]></tbox></line>
+<line><tbox llx="120" lly="624" urx="442" ury="638" f="1"><![CDATA[COINS, University of Massachusetts, Amherst, MA, March 1992. ]]></tbox></line>
+<line><tbox llx="297" lly="92" urx="319" ury="107" f="1"><![CDATA[15 ]]></tbox></line>
+<pbox llx="108.00" lly="92.00" urx="508.00" ury="707.00"/></page>
+<page n="2">
+<line><tbox llx="108" lly="685" urx="203" ury="707" f="1"><![CDATA[References ]]></tbox></line>
+<line><tbox llx="108" lly="660" urx="507" ury="673" f="2"><![CDATA[[ Chapman and Kaelbling, 1991 ] David Chapman and Leslie Pack Kaelbling. ]]></tbox></line>
+<line><tbox llx="120" lly="645" urx="435" ury="660" f="2"><![CDATA[Learning from delayed reinforcement in a complex domain. In ]]></tbox><tbox llx="429" lly="645" urx="507" ury="659" f="3"><![CDATA[Proceedings of ]]></tbox></line>
+<line><tbox llx="120" lly="632" urx="163" ury="646" f="3"><![CDATA[IJCAI, ]]></tbox><tbox llx="157" lly="632" urx="192" ury="646" f="2"><![CDATA[1991. ]]></tbox></line>
+<line><tbox llx="108" lly="610" urx="168" ury="624" f="2"><![CDATA[[ Chrisman ]]></tbox><tbox llx="161" lly="609" urx="198" ury="623" f="3"><![CDATA[et al., ]]></tbox><tbox llx="192" lly="609" urx="507" ury="624" f="2"><![CDATA[1991 ] Lonnie Chrisman, Rich Caruana, and Wayne Carriker. In- ]]></tbox></line>
+<line><tbox llx="120" lly="596" urx="507" ury="610" f="2"><![CDATA[telligent agent design issues: Internal agent state and incomplete perception. ]]></tbox></line>
+<line><tbox llx="120" lly="582" urx="507" ury="596" f="3"><![CDATA[Working Notes of the AAAI Fall Symposium: Sensory Aspects of Robotic Intel- ]]></tbox></line>
+<line><tbox llx="120" lly="569" urx="165" ury="583" f="3"><![CDATA[ligence, ]]></tbox><tbox llx="158" lly="569" urx="194" ury="583" f="2"><![CDATA[1991. ]]></tbox></line>
+<line><tbox llx="108" lly="547" urx="507" ury="560" f="2"><![CDATA[[ Chrisman, 1992 ] Lonnie Chrisman. Reinforcement learning with perceptual alias- ]]></tbox></line>
+<line><tbox llx="120" lly="533" urx="348" ury="547" f="2"><![CDATA[ing: The perceptual distinctions approach. In ]]></tbox><tbox llx="342" lly="533" urx="398" ury="547" f="3"><![CDATA[AAAI-92, ]]></tbox><tbox llx="392" lly="533" urx="427" ury="547" f="2"><![CDATA[1992. ]]></tbox></line>
+<line><tbox llx="108" lly="511" urx="450" ury="524" f="2"><![CDATA[[ Garey and Johnson, 1979 ] Michael R. Garey and David S. Johnson. ]]></tbox><tbox llx="446" lly="510" urx="507" ury="524" f="3"><![CDATA[Computers ]]></tbox></line>
+<line><tbox llx="120" lly="497" urx="430" ury="511" f="3"><![CDATA[and Intractability, A Guide to the Theory of NP-Completeness. ]]></tbox><tbox llx="424" lly="497" urx="507" ury="511" f="2"><![CDATA[W. H. Freeman ]]></tbox></line>
+<line><tbox llx="120" lly="483" urx="228" ury="497" f="2"><![CDATA[and Company, 1979. ]]></tbox></line>
+<line><tbox llx="108" lly="461" urx="312" ury="475" f="2"><![CDATA[[ Kaelbling, 1990 ] Leslie Pack Kaelbling. ]]></tbox><tbox llx="312" lly="460" urx="476" ury="474" f="3"><![CDATA[Learning in Embedded Systems. ]]></tbox><tbox llx="475" lly="460" urx="507" ury="475" f="2"><![CDATA[PhD ]]></tbox></line>
+<line><tbox llx="120" lly="447" urx="288" ury="461" f="2"><![CDATA[thesis, Stanford University, 1990. ]]></tbox></line>
+<line><tbox llx="108" lly="425" urx="507" ury="439" f="2"><![CDATA[[ Maes and Brooks, 1990 ] Pattie Maes and Rodney A. Brooks. Learning to coor- ]]></tbox></line>
+<line><tbox llx="120" lly="411" urx="226" ury="425" f="2"><![CDATA[dinate behaviors. In ]]></tbox><tbox llx="220" lly="411" urx="348" ury="425" f="3"><![CDATA[Proceedings of AAAI-90, ]]></tbox><tbox llx="341" lly="411" urx="451" ury="425" f="2"><![CDATA[pages 796--802, 1990. ]]></tbox></line>
+<line><tbox llx="108" lly="389" urx="507" ury="403" f="2"><![CDATA[[ Rabiner, 1989 ] Lawrence R. Rabiner. A tutorial on hidden Markov models and ]]></tbox></line>
+<line><tbox llx="120" lly="375" urx="341" ury="389" f="2"><![CDATA[selected applications in speech recognition. ]]></tbox><tbox llx="341" lly="375" urx="474" ury="389" f="3"><![CDATA[Proceedings of the IEEE, ]]></tbox><tbox llx="469" lly="375" urx="508" ury="389" f="2"><![CDATA[77(2), ]]></tbox></line>
+<line><tbox llx="120" lly="361" urx="202" ury="376" f="2"><![CDATA[February 1989. ]]></tbox></line>
+<line><tbox llx="108" lly="340" urx="507" ury="353" f="2"><![CDATA[[ Stolcke and Omohundro, 1992 ] Andreas Stolcke and Stephen Omohundro. Hid- ]]></tbox></line>
+<line><tbox llx="120" lly="325" urx="434" ury="340" f="2"><![CDATA[den Markov model induction by bayesian model merging. In ]]></tbox><tbox llx="429" lly="325" urx="507" ury="339" f="3"><![CDATA[Proceedings of ]]></tbox></line>
+<line><tbox llx="120" lly="312" urx="177" ury="326" f="3"><![CDATA[NIPS '92, ]]></tbox><tbox llx="171" lly="311" urx="258" ury="326" f="2"><![CDATA[November 1992. ]]></tbox></line>
+<line><tbox llx="108" lly="290" urx="507" ury="303" f="2"><![CDATA[[ Sutton, 1990 ] Richard S. Sutton. Integrating architectures for learning, planning, ]]></tbox></line>
+<line><tbox llx="120" lly="275" urx="437" ury="290" f="2"><![CDATA[and reacting based on approximating dynamic programming. In ]]></tbox><tbox llx="430" lly="276" urx="507" ury="290" f="3"><![CDATA[Proceedings of ]]></tbox></line>
+<line><tbox llx="120" lly="262" urx="409" ury="276" f="3"><![CDATA[the Seventh International Conference on Machine Learning, ]]></tbox><tbox llx="402" lly="262" urx="508" ury="276" f="2"><![CDATA[Austin, Texas, 1990. ]]></tbox></line>
+<line><tbox llx="120" lly="248" urx="224" ury="263" f="2"><![CDATA[Morgan Kaufmann. ]]></tbox></line>
+<line><tbox llx="108" lly="227" urx="507" ury="240" f="2"><![CDATA[[ Thrun, 1992 ] Sebastian B. Thrun. Efficient exploration in reinforcement learning. ]]></tbox></line>
+<line><tbox llx="120" lly="212" urx="486" ury="227" f="2"><![CDATA[Technical Report CMU-CS-92-102, CMU Comp. Sci. Dept., January 1992. ]]></tbox></line>
+<line><tbox llx="108" lly="191" urx="286" ury="204" f="2"><![CDATA[[ Watkins, 1989 ] C.J.C.H. Watkins. ]]></tbox><tbox llx="281" lly="190" urx="446" ury="204" f="3"><![CDATA[Learning from Delayed Rewards. ]]></tbox><tbox llx="442" lly="190" urx="507" ury="204" f="2"><![CDATA[PhD thesis, ]]></tbox></line>
+<line><tbox llx="120" lly="176" urx="353" ury="191" f="2"><![CDATA[Cambridge University Psychology Dept., 1989. ]]></tbox></line>
+<line><tbox llx="108" lly="155" urx="507" ury="168" f="2"><![CDATA[[ Whitehead and Ballard, 1990 ] Steven D. Whitehead and Dana H. Ballard. Learn- ]]></tbox></line>
+<line><tbox llx="120" lly="140" urx="507" ury="155" f="2"><![CDATA[ing to perceive and act. Technical Report 331, University of Rochester Computer ]]></tbox></line>
+<line><tbox llx="120" lly="127" urx="253" ury="141" f="2"><![CDATA[Science Dept., June 1990. ]]></tbox></line>
+<line><tbox llx="297" lly="92" urx="319" ury="107" f="2"><![CDATA[14 ]]></tbox></line>
+<pbox llx="108.00" lly="92.00" urx="508.00" ury="674.00"/></page>
+<page n="3">
+<line><tbox llx="162" lly="468" urx="178" ury="479" f="1"><![CDATA[5a ]]></tbox></line>
+<line><tbox llx="132" lly="523" urx="257" ury="535" f="1"><![CDATA[9 12 ]]></tbox></line>
+<line><tbox llx="187" lly="523" urx="200" ury="535" f="1"><![CDATA[8 ]]></tbox></line>
+<line><tbox llx="186" lly="578" urx="202" ury="590" f="1"><![CDATA[10 ]]></tbox></line>
+<line><tbox llx="164" lly="412" urx="176" ury="424" f="1"><![CDATA[7 ]]></tbox></line>
+<line><tbox llx="209" lly="468" urx="226" ury="479" f="1"><![CDATA[5b ]]></tbox></line>
+<line><tbox llx="116" lly="598" urx="159" ury="616" f="2"><![CDATA[Trial 3 ]]></tbox></line>
+<line><tbox llx="375" lly="468" urx="391" ury="479" f="1"><![CDATA[5a ]]></tbox></line>
+<line><tbox llx="345" lly="523" urx="470" ury="535" f="1"><![CDATA[9 12 ]]></tbox></line>
+<line><tbox llx="400" lly="523" urx="413" ury="535" f="1"><![CDATA[8 ]]></tbox></line>
+<line><tbox llx="375" lly="412" urx="391" ury="424" f="1"><![CDATA[7a ]]></tbox></line>
+<line><tbox llx="422" lly="468" urx="439" ury="479" f="1"><![CDATA[5b ]]></tbox></line>
+<line><tbox llx="329" lly="598" urx="372" ury="616" f="2"><![CDATA[Trial 4 ]]></tbox></line>
+<line><tbox llx="422" lly="412" urx="439" ury="424" f="1"><![CDATA[7b ]]></tbox></line>
+<line><tbox llx="373" lly="577" urx="445" ury="590" f="1"><![CDATA[10a 10b ]]></tbox></line>
+<line><tbox llx="108" lly="371" urx="507" ury="386" f="1"><![CDATA[Figure 6: The second half of the sequence of Hidden Markov models created by ]]></tbox></line>
+<line><tbox llx="108" lly="358" urx="335" ury="372" f="1"><![CDATA[UDM as it learns the task shown in Figure 4. ]]></tbox><tbox llx="330" lly="358" urx="378" ury="371" f="2"><![CDATA[Trial 3: ]]></tbox><tbox llx="374" lly="358" urx="507" ury="372" f="1"><![CDATA[The agent has found non- ]]></tbox></line>
+<line><tbox llx="108" lly="344" urx="507" ury="358" f="1"><![CDATA[overlapping confidence intervals on the transitions into 5b---arriving from state 8 ]]></tbox></line>
+<line><tbox llx="108" lly="330" urx="507" ury="345" f="1"><![CDATA[is significantly different than arriving from states 9 or 12. UDM temporarily splits ]]></tbox></line>
+<line><tbox llx="108" lly="317" urx="348" ury="331" f="1"><![CDATA[5b into 5b and 5c, but then 5c is joined with 5a. ]]></tbox><tbox llx="343" lly="317" urx="391" ury="330" f="2"><![CDATA[Trial 4: ]]></tbox><tbox llx="387" lly="317" urx="507" ury="331" f="1"><![CDATA[Two splits occur at the ]]></tbox></line>
+<line><tbox llx="108" lly="303" urx="508" ury="318" f="1"><![CDATA[end of this trial. Average future reward after leaving the center state 7 is greater ]]></tbox></line>
+<line><tbox llx="108" lly="290" urx="507" ury="304" f="1"><![CDATA[than after leaving the side state 7's because from the center state 7 the agent is ]]></tbox></line>
+<line><tbox llx="108" lly="276" urx="507" ury="291" f="1"><![CDATA[teleported to locations that are are often close to the goal. UDM splits state 7 ]]></tbox></line>
+<line><tbox llx="108" lly="263" urx="507" ury="277" f="1"><![CDATA[recognizing that arriving from 5a is different than arriving from 5b. State 10 is ]]></tbox></line>
+<line><tbox llx="108" lly="249" urx="507" ury="264" f="1"><![CDATA[also split because the confidence intervals for leaving 10 by going east and leaving ]]></tbox></line>
+<line><tbox llx="108" lly="236" urx="507" ury="250" f="1"><![CDATA[10 by going west don't overlap in the transitions coming from states 9 and 12. The ]]></tbox></line>
+<line><tbox llx="108" lly="222" urx="508" ury="236" f="1"><![CDATA[agent will now arrive in state 10a from state 9 and arrive in state 10b from state ]]></tbox></line>
+<line><tbox llx="108" lly="209" urx="392" ury="223" f="1"><![CDATA[12. There are no more changes to the HMM after trial 5. ]]></tbox></line>
+<line><tbox llx="297" lly="92" urx="319" ury="107" f="1"><![CDATA[13 ]]></tbox></line>
+<pbox llx="108.00" lly="92.00" urx="508.00" ury="616.00"/></page>
+<page n="4">
+<line><tbox llx="364" lly="455" urx="381" ury="467" f="1"><![CDATA[5a ]]></tbox></line>
+<line><tbox llx="334" lly="511" urx="461" ury="523" f="1"><![CDATA[9 12 ]]></tbox></line>
+<line><tbox llx="390" lly="511" urx="403" ury="523" f="1"><![CDATA[8 ]]></tbox></line>
+<line><tbox llx="389" lly="567" urx="405" ury="579" f="1"><![CDATA[10 ]]></tbox></line>
+<line><tbox llx="366" lly="398" urx="379" ury="410" f="1"><![CDATA[7 ]]></tbox></line>
+<line><tbox llx="413" lly="455" urx="429" ury="467" f="1"><![CDATA[5b ]]></tbox></line>
+<line><tbox llx="326" lly="580" urx="370" ury="597" f="2"><![CDATA[Trial 2 ]]></tbox></line>
+<line><tbox llx="181" lly="447" urx="194" ury="459" f="1"><![CDATA[5 ]]></tbox></line>
+<line><tbox llx="125" lly="503" urx="253" ury="515" f="1"><![CDATA[9 12 ]]></tbox></line>
+<line><tbox llx="181" lly="503" urx="194" ury="515" f="1"><![CDATA[8 ]]></tbox></line>
+<line><tbox llx="180" lly="559" urx="196" ury="571" f="1"><![CDATA[10 ]]></tbox></line>
+<line><tbox llx="181" lly="390" urx="194" ury="402" f="1"><![CDATA[7 ]]></tbox></line>
+<line><tbox llx="117" lly="580" urx="161" ury="597" f="2"><![CDATA[Trial 1 ]]></tbox></line>
+<line><tbox llx="108" lly="349" urx="508" ury="363" f="1"><![CDATA[Figure 5: The first half of the sequence of Hidden Markov models created by UDM ]]></tbox></line>
+<line><tbox llx="108" lly="335" urx="507" ury="350" f="1"><![CDATA[as it learns the task shown in Figure 4. The HMM states are fully connected, ]]></tbox></line>
+<line><tbox llx="108" lly="322" urx="507" ury="336" f="1"><![CDATA[but the diagrams only show transitions with probability greater than 0.3. Also ]]></tbox></line>
+<line><tbox llx="108" lly="308" urx="438" ury="323" f="1"><![CDATA[not shown here are the different actions that cause the transitions. ]]></tbox><tbox llx="433" lly="309" urx="482" ury="321" f="2"><![CDATA[Trial 1: ]]></tbox><tbox llx="478" lly="308" urx="507" ury="323" f="1"><![CDATA[The ]]></tbox></line>
+<line><tbox llx="108" lly="294" urx="507" ury="309" f="1"><![CDATA[agent has learned some transition probabilities, but it has not yet gathered enough ]]></tbox></line>
+<line><tbox llx="108" lly="281" urx="256" ury="296" f="1"><![CDATA[statistics to split any states. ]]></tbox><tbox llx="252" lly="282" urx="301" ury="294" f="2"><![CDATA[Trial 2: ]]></tbox><tbox llx="298" lly="281" urx="507" ury="296" f="1"><![CDATA[The agent has discovered that the future ]]></tbox></line>
+<line><tbox llx="108" lly="268" urx="507" ury="282" f="1"><![CDATA[discounted reward received after leaving state 5 is significantly different when it ]]></tbox></line>
+<line><tbox llx="108" lly="254" urx="507" ury="268" f="1"><![CDATA[arrives from state 8 than it is when it arrives from state 7. UDM has duplicated ]]></tbox></line>
+<line><tbox llx="108" lly="240" urx="508" ury="255" f="1"><![CDATA[state 5, creating 5a and 5b, then removed the state 8 incoming transition from 5a ]]></tbox></line>
+<line><tbox llx="108" lly="227" urx="375" ury="241" f="1"><![CDATA[and removed the state 7 incoming transition from 5b. ]]></tbox></line>
+<line><tbox llx="297" lly="92" urx="319" ury="107" f="1"><![CDATA[12 ]]></tbox></line>
+<pbox llx="108.00" lly="92.00" urx="508.00" ury="597.00"/></page>
+<page n="5">
+<line><tbox llx="212" lly="538" urx="370" ury="561" f="1"><![CDATA[9 10 8 10 ]]></tbox></line>
+<line><tbox llx="212" lly="496" urx="323" ury="518" f="1"><![CDATA[5 5 ]]></tbox></line>
+<line><tbox llx="212" lly="453" urx="323" ury="475" f="1"><![CDATA[7 7 ]]></tbox></line>
+<line><tbox llx="380" lly="538" urx="413" ury="561" f="1"><![CDATA[12 ]]></tbox></line>
+<line><tbox llx="384" lly="496" urx="409" ury="518" f="1"><![CDATA[5 ]]></tbox></line>
+<line><tbox llx="386" lly="454" urx="404" ury="468" f="1"><![CDATA[7 ]]></tbox></line>
+<line><tbox llx="108" lly="355" urx="507" ury="370" f="1"><![CDATA[Figure 4: One of several mazes successfully solved by UDM. The agent's perception ]]></tbox></line>
+<line><tbox llx="108" lly="342" urx="507" ury="356" f="1"><![CDATA[is defined by a bit vector of length four in which the bits specify whether or not ]]></tbox></line>
+<line><tbox llx="108" lly="328" urx="507" ury="343" f="1"><![CDATA[there is a barrier to the agent's immediate north, east, south, west. The numbers ]]></tbox></line>
+<line><tbox llx="108" lly="315" urx="507" ury="329" f="1"><![CDATA[in the squares are the decimal equivalents of the bit vectors interpreted in binary. ]]></tbox></line>
+<line><tbox llx="108" lly="301" urx="507" ury="316" f="1"><![CDATA[Although the three state 5's are all perceptually equivalent, the agent must learn ]]></tbox></line>
+<line><tbox llx="108" lly="287" urx="507" ury="302" f="1"><![CDATA[to go south in the 5 in the center, and go north in the 5's on the right and left. ]]></tbox></line>
+<line><tbox llx="108" lly="274" urx="507" ury="289" f="1"><![CDATA[The Hidden Markov Model built by UDM has two states with high probabilities ]]></tbox></line>
+<line><tbox llx="108" lly="260" urx="507" ury="275" f="1"><![CDATA[of observing 5---one representing the 5 in the center and the other combining the ]]></tbox></line>
+<line><tbox llx="108" lly="247" urx="508" ury="261" f="1"><![CDATA[two 5's on the right and left. Perception 10 is also aliased, and is split in two ]]></tbox></line>
+<line><tbox llx="108" lly="233" urx="507" ury="248" f="1"><![CDATA[since different actions are required in the two world states. See Figures 5 and 6 ]]></tbox></line>
+<line><tbox llx="108" lly="220" urx="360" ury="234" f="1"><![CDATA[for diagrams of the HMM built to solve this maze. ]]></tbox></line>
+<line><tbox llx="297" lly="92" urx="319" ury="107" f="1"><![CDATA[11 ]]></tbox></line>
+<pbox llx="108.00" lly="92.00" urx="508.00" ury="702.00"/></page>
+<page n="6">
+<line><tbox llx="108" lly="687" urx="440" ury="702" f="1"><![CDATA[to disambiguate the ubiquitous perceptual aliasing that occurs with ]]></tbox><tbox llx="433" lly="687" urx="507" ury="701" f="2"><![CDATA[active percep- ]]></tbox></line>
+<line><tbox llx="108" lly="674" urx="140" ury="688" f="2"><![CDATA[tion. ]]></tbox><tbox llx="135" lly="674" urx="507" ury="688" f="1"><![CDATA[In fact, the use of memory with active perception has the potential to solve ]]></tbox></line>
+<line><tbox llx="108" lly="660" urx="507" ury="674" f="1"><![CDATA[UDM's lack of perceptual distinctions quite nicely. Imagine an agent that chooses ]]></tbox></line>
+<line><tbox llx="108" lly="647" urx="507" ury="661" f="1"><![CDATA[from among overt and perceptual actions that each return one bit, and this one ]]></tbox></line>
+<line><tbox llx="108" lly="633" urx="507" ury="648" f="1"><![CDATA[bit makes up the agent's entire immediate perception space. We can think of the ]]></tbox></line>
+<line><tbox llx="108" lly="619" urx="507" ury="634" f="1"><![CDATA[different perceptual actions as each returning a different bit of the total percep- ]]></tbox></line>
+<line><tbox llx="108" lly="606" urx="507" ury="620" f="1"><![CDATA[tion vector available from the current world state. The agent can generalize in ]]></tbox></line>
+<line><tbox llx="108" lly="592" urx="507" ury="607" f="1"><![CDATA[perception space by only executing the actions necessary to get the bits that are ]]></tbox></line>
+<line><tbox llx="108" lly="579" urx="508" ury="593" f="1"><![CDATA[currently relevant. This scheme is even better than generalizing by ``masking out'' ]]></tbox></line>
+<line><tbox llx="108" lly="565" urx="507" ury="580" f="1"><![CDATA[parts of the perception vector because the agent's policy can effectively act as a ]]></tbox></line>
+<line><tbox llx="108" lly="552" urx="507" ury="566" f="1"><![CDATA[decision tree that specifies which bits are needed---depending on the result of an ]]></tbox></line>
+<line><tbox llx="108" lly="538" urx="508" ury="553" f="1"><![CDATA[bit gathered early in the process the agent can decide whether or not it needs to ]]></tbox></line>
+<line><tbox llx="108" lly="525" urx="507" ury="539" f="1"><![CDATA[gather more bits before it executes an overt action. This scheme will also allow ]]></tbox></line>
+<line><tbox llx="108" lly="511" urx="368" ury="525" f="1"><![CDATA[the agent to execute open-loop sequences of actions. ]]></tbox></line>
+<line><tbox llx="108" lly="478" urx="225" ury="493" f="3"><![CDATA[Acknowledgments ]]></tbox></line>
+<line><tbox llx="108" lly="453" urx="508" ury="468" f="1"><![CDATA[This work has benefited from discussions with many colleagues, including: Dana ]]></tbox></line>
+<line><tbox llx="108" lly="440" urx="507" ury="454" f="1"><![CDATA[Ballard, Mary Hayoe, Jeff Schneider, Jonas Karlsson and Polly Pook. I am grateful ]]></tbox></line>
+<line><tbox llx="108" lly="426" urx="507" ury="441" f="1"><![CDATA[to Dana Ballard and Meredith Ward for making helpful comments on an earlier ]]></tbox></line>
+<line><tbox llx="108" lly="413" urx="145" ury="427" f="1"><![CDATA[draft. ]]></tbox></line>
+<line><tbox llx="297" lly="92" urx="319" ury="107" f="1"><![CDATA[10 ]]></tbox></line>
+<pbox llx="108.00" lly="92.00" urx="508.00" ury="707.00"/></page>
+<page n="7">
+<line><tbox llx="108" lly="685" urx="365" ury="707" f="1"><![CDATA[5 Conclusions and Future Work ]]></tbox></line>
+<line><tbox llx="108" lly="659" urx="524" ury="673" f="2"><![CDATA[The Utile Distinction Memory technique provides a refutation to the ``Utile-Distinction ]]></tbox></line>
+<line><tbox llx="108" lly="645" urx="507" ury="660" f="2"><![CDATA[Conjecture'' [ Chrisman, 1992 ] , which stated that is was impossible to only intro- ]]></tbox></line>
+<line><tbox llx="108" lly="632" urx="508" ury="646" f="2"><![CDATA[duce memory distinctions that impact utility. As such, UDM acts as a starting ]]></tbox></line>
+<line><tbox llx="108" lly="618" urx="507" ury="633" f="2"><![CDATA[point from which to design improved learners that use memory to create selective, ]]></tbox></line>
+<line><tbox llx="108" lly="605" urx="356" ury="619" f="2"><![CDATA[task-specific representations of their environment. ]]></tbox></line>
+<line><tbox llx="126" lly="587" urx="507" ury="602" f="2"><![CDATA[UDM is not without limitations and problems. The computational require- ]]></tbox></line>
+<line><tbox llx="108" lly="574" urx="507" ury="588" f="2"><![CDATA[ments for the state splitting test are significant, both in terms of storage and ]]></tbox></line>
+<line><tbox llx="108" lly="560" urx="507" ury="574" f="2"><![CDATA[calculation. Any method that uses the Baum-Welch procedure is buying into ]]></tbox></line>
+<line><tbox llx="108" lly="547" urx="147" ury="559" f="3"><![CDATA[O(AN ]]></tbox><tbox llx="140" lly="552" urx="149" ury="561" f="4"><![CDATA[2 ]]></tbox><tbox llx="144" lly="547" urx="167" ury="559" f="3"><![CDATA[m) ]]></tbox><tbox llx="162" lly="546" urx="317" ury="561" f="2"><![CDATA[time and storage. As long as ]]></tbox><tbox llx="311" lly="547" urx="358" ury="559" f="3"><![CDATA[A ! m, ]]></tbox><tbox llx="354" lly="546" urx="507" ury="561" f="2"><![CDATA[UDM does not increase these ]]></tbox></line>
+<line><tbox llx="108" lly="533" urx="507" ury="548" f="2"><![CDATA[requirements, however, the increased constants are not insignificant. Hopefully ]]></tbox></line>
+<line><tbox llx="108" lly="519" urx="507" ury="534" f="2"><![CDATA[UDM's minimal, task-specific state splitting will allow small enough state spaces ]]></tbox></line>
+<line><tbox llx="108" lly="506" urx="297" ury="520" f="2"><![CDATA[to at least partially make up for this. ]]></tbox></line>
+<line><tbox llx="126" lly="488" urx="507" ury="503" f="2"><![CDATA[UDM splits states in order to increase memory-based distinctions, but it cur- ]]></tbox></line>
+<line><tbox llx="108" lly="475" urx="508" ury="489" f="2"><![CDATA[rently has no method for splitting states to increase perceptual distinctions that ]]></tbox></line>
+<line><tbox llx="108" lly="461" urx="507" ury="476" f="2"><![CDATA[predict future reward. For this reason UDM begins with one state per perception, ]]></tbox></line>
+<line><tbox llx="108" lly="448" urx="507" ury="462" f="2"><![CDATA[a strategy that will obviously not work for large perception spaces. Some method ]]></tbox></line>
+<line><tbox llx="108" lly="434" urx="508" ury="449" f="2"><![CDATA[for making perceptual distinctions will be necessary, and it seems plausible that ]]></tbox></line>
+<line><tbox llx="108" lly="420" urx="508" ury="435" f="2"><![CDATA[Chapman and Kaelbling's G algorithm [ Chapman and Kaelbling, 1991 ] or even ]]></tbox></line>
+<line><tbox llx="108" lly="407" urx="507" ury="422" f="2"><![CDATA[some technique based on confidence intervals for the unused perception bits in a ]]></tbox></line>
+<line><tbox llx="108" lly="393" urx="333" ury="408" f="2"><![CDATA[state should work in conjunction with UDM. ]]></tbox></line>
+<line><tbox llx="126" lly="376" urx="507" ury="390" f="2"><![CDATA[Although UDM has no problems building memory chains of arbitrary length, it ]]></tbox></line>
+<line><tbox llx="108" lly="362" urx="507" ury="377" f="2"><![CDATA[does require that some statistically significant benefit be detectable for each split ]]></tbox></line>
+<line><tbox llx="108" lly="349" urx="507" ury="363" f="2"><![CDATA[individually in sequence. UDM has solved mazes with multi-step paths between ]]></tbox></line>
+<line><tbox llx="108" lly="335" urx="507" ury="350" f="2"><![CDATA[the reward-predicting perception and the reward, however, it would not be able ]]></tbox></line>
+<line><tbox llx="108" lly="322" urx="507" ury="336" f="2"><![CDATA[to solve problems in which a conjunction of perceptions in sequence predicted ]]></tbox></line>
+<line><tbox llx="108" lly="308" urx="507" ury="323" f="2"><![CDATA[reward, but each of the perceptions on its own were completely independent of ]]></tbox></line>
+<line><tbox llx="108" lly="295" urx="507" ury="309" f="2"><![CDATA[future reward. This assumption about the relevance of pieces of information in ]]></tbox></line>
+<line><tbox llx="108" lly="281" urx="508" ury="296" f="2"><![CDATA[isolation is also made by [ Chapman and Kaelbling, 1991 ] and [ Maes and Brooks, ]]></tbox></line>
+<line><tbox llx="108" lly="268" urx="147" ury="282" f="2"><![CDATA[1990 ] . ]]></tbox></line>
+<line><tbox llx="126" lly="250" urx="507" ury="265" f="2"><![CDATA[In future work I hope to relax this restriction (and concurrently improve the ]]></tbox></line>
+<line><tbox llx="108" lly="236" urx="508" ury="251" f="2"><![CDATA[speed of learning) by, in a sense, taking the opposite approach to learning the HMM ]]></tbox></line>
+<line><tbox llx="108" lly="223" urx="507" ury="237" f="2"><![CDATA[than the approach used by UDM. Instead of starting by over-generalizing and only ]]></tbox></line>
+<line><tbox llx="108" lly="209" urx="507" ury="224" f="2"><![CDATA[making distinctions after many trials have demonstrated statistical differences, the ]]></tbox></line>
+<line><tbox llx="108" lly="196" urx="508" ury="210" f="2"><![CDATA[agent could begin by memorizing all its experiences and then merging HMM states ]]></tbox></line>
+<line><tbox llx="108" lly="182" urx="388" ury="197" f="2"><![CDATA[as it learns. This may also help address the problem of ]]></tbox><tbox llx="382" lly="182" urx="507" ury="196" f="5"><![CDATA[extended concealment of ]]></tbox></line>
+<line><tbox llx="108" lly="169" urx="190" ury="183" f="5"><![CDATA[crucial features ]]></tbox><tbox llx="183" lly="170" urx="507" ury="183" f="2"><![CDATA[[ Chrisman, 1992 ] . The underlying techniques for such an approach ]]></tbox></line>
+<line><tbox llx="108" lly="155" urx="507" ury="170" f="2"><![CDATA[are described in [ Stolcke and Omohundro, 1992 ] . Yee also uses the idea of first ]]></tbox></line>
+<line><tbox llx="108" lly="142" urx="389" ury="156" f="2"><![CDATA[memorizing, then building generalizations in [ Yee, 1992 ] . ]]></tbox></line>
+<line><tbox llx="126" lly="124" urx="508" ury="139" f="2"><![CDATA[My primary goal in working with memory for learning agents is to use memory ]]></tbox></line>
+<line><tbox llx="300" lly="92" urx="316" ury="107" f="2"><![CDATA[9 ]]></tbox></line>
+<pbox llx="108.00" lly="92.00" urx="524.00" ury="707.00"/></page>
