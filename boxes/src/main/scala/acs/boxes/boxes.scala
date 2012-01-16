@@ -1,3 +1,5 @@
+package acs.boxes
+
 object Commons {
   def head[A](a:Seq[A]) = a.head
   def head[A](a:List[A]) = a.head
@@ -10,7 +12,7 @@ object Commons {
 
 import Commons._
 
-object boxes {
+object Boxes {
   import scalaz._
   import Scalaz._
 
@@ -22,7 +24,36 @@ object boxes {
   //                }
   //   deriving (Show)
 
-  case class Box(rows:Int, cols:Int, content: Content)
+  case class Box(rows:Int, cols:Int, content: Content) {
+    // -- | Paste two boxes together horizontally, using a default (top)
+    // --   alignment.
+    // (<>) :: Box -> Box -> Box
+    // l <> r = hcat top [l,r]
+    def <> : Box => Box = 
+      r => hcat(top) (this :: r :: nil)
+
+    // -- | Paste two boxes together horizontally with a single intervening
+    // --   column of space, using a default (top) alignment.
+    // (<+>) :: Box -> Box -> Box
+    // l <+> r = hcat top [l, emptyBox 0 1, r]
+    def <+> : Box => Box = 
+      r => hcat(top)(List(this, emptyBox(0)(1), r))
+
+    // -- | Paste two boxes together vertically, using a default (left)
+    // --   alignment.
+    // (\/\/) :: Box -> Box -> Box
+    // t \/\/ b = vcat left [t,b]
+    def <-> : Box => Box = 
+      b => vcat(left)(List(this,b))
+
+
+    // -- | Paste two boxes together vertically with a single intervening row
+    // --   of space, using a default (left) alignment.
+    // (/+/) :: Box -> Box -> Box
+    // t /+/ b = vcat left [t, emptyBox 1 0, b]
+    def <=> : Box => Box = 
+      b => vcat(left)(List(this,emptyBox(1)(0), b))
+  }
 
   object Box {
     val rows : Lens[Box, Int] = Lens(_.rows, (obj, v) => obj copy (rows = v))
@@ -125,34 +156,6 @@ object boxes {
   def text: String => Box =
     s => Box(1, s.length, Text(s))
 
-  // -- | Paste two boxes together horizontally, using a default (top)
-  // --   alignment.
-  // (<>) :: Box -> Box -> Box
-  // l <> r = hcat top [l,r]
-  def <> : Box => Box => Box = 
-    l => r => hcat(top) (l :: r :: nil)
-
-  // -- | Paste two boxes together horizontally with a single intervening
-  // --   column of space, using a default (top) alignment.
-  // (<+>) :: Box -> Box -> Box
-  // l <+> r = hcat top [l, emptyBox 0 1, r]
-  def <+> : Box => Box => Box = 
-    l => r => hcat(top)(List(l, emptyBox(0)(1), r))
-
-  // -- | Paste two boxes together vertically, using a default (left)
-  // --   alignment.
-  // (\/\/) :: Box -> Box -> Box
-  // t \/\/ b = vcat left [t,b]
-  def <-> : Box => Box => Box = 
-    t => b => vcat(left)(List(t,b))
-
-
-  // -- | Paste two boxes together vertically with a single intervening row
-  // --   of space, using a default (left) alignment.
-  // (/+/) :: Box -> Box -> Box
-  // t /+/ b = vcat left [t, emptyBox 1 0, b]
-  def <=> : Box => Box => Box = 
-    t => b => vcat(left)(List(t,emptyBox(1)(0), b))
 
 
   // -- | Glue a list of boxes together horizontally, with the given alignment.
@@ -426,6 +429,7 @@ object boxes {
   def moveRight : Int => Box => Box = 
     n => b => alignHoriz(right)(b.cols + n)(b)
 
+
   // --------------------------------------------------------------------------------
   // --  Implementation  ------------------------------------------------------------
   // --------------------------------------------------------------------------------
@@ -435,7 +439,7 @@ object boxes {
   // render : Box -> String
   // render = unlines . renderBox
   def render : Box => String = 
-    b => renderBox ∘ (_.mkString("\n")) 
+    renderBox ∘ (_.mkString("\n")) 
 
   // -- XXX make QC properties for takeP
 
@@ -451,8 +455,8 @@ object boxes {
   def takeP[A] : A => Int => List[A] => List[A] = 
     a => n => aas => {
       val pad = if (n <= aas.length) 0 else n - aas.length
-      lazy val extras:List[A] = extras.last :: a :: Nil
-      aas.take(n) ::: extras.take(pad)
+      // aas.take(n) ::: a.repeat[List].take(pad)
+      aas.take(n) ::: a.replicate[List](pad)
     }
 
   // -- | @takePA @ is like 'takeP', but with alignment.  That is, we
@@ -527,25 +531,19 @@ object boxes {
       case Box(r, c, Blank)           => resizeBox(r, c, List(""))
       case Box(r, c, Text(t))         => resizeBox(r, c, List(t))
       case Box(r, c, Row(bs))         => {
-        // = resizeBox r c . merge . map (renderBoxWithRows r) $ bs
-        //     where merge = foldr (zipWith (++)) (repeat [])
-
-
-        def merge: List[String] => String = 
-          ss => ss.foldr ("") {_ + _}  // {(acc:List[String], e:String) => acc zip e})
-
-        // val asdf = resizeBox(r)(c)
-        bs ∘ renderBoxWithRows(r) |>  merge | resizeBox(r)(c)
-
-        "" :: Nil
+        def merge: List[List[String]] => List[String] = 
+          sss => sss.foldr("".repeat[List]) {
+            // case (a:List[String], b:List[String]) => 
+            // ((_:List[String]) zip (_:List[String])) ∘ {case (x, y) => x+y}
+            case (a, b) => (a zip b) map {case (x, y) => x+y}
+          }
+        bs ∘ renderBoxWithRows(r) |> merge ∘ (b => resizeBox(r, c, b))
       }
-      
-      // case Box(r, c, Col(bs))         => resizeBox r c . concatMap (renderBoxWithCols c) $ bs
-      // case Box(r, c, SubBox(ha, va, b)) => resizeBoxAligned r c ha va . renderBox $ b
+      case Box(r, c, Col(bs))         => 
+        bs >>= (renderBoxWithCols(c) ∘ (b => resizeBox(r, c, b)))
+      case Box(r, c, SubBox(ha, va, b)) => 
+        resizeBoxAligned(r, c, ha, va)(renderBox(b))
     }
-
-
-
 
 
 
@@ -574,9 +572,14 @@ object boxes {
   // -- | Resize a rendered list of lines, using given alignments.
   // resizeBoxAligned : Int => Int => Alignment => Alignment => [String] => [String]
   // resizeBoxAligned r c ha va = takePA va (blanks c) r . map (takePA ha ' ' c)
+  def resizeBoxAligned : (Int, Int, Alignment, Alignment) => List[String] => List[String] = 
+     (r, c, ha, va) => ss => 
+       takePA(va)(blanks(c))(r){
+         (ss.map (_.toList)) ∘ (takePA(ha)(' ')(c)) ∘ (_.mkString(""))
+       }
 
   // -- | A convenience function for rendering a box to stdout.
-  // printBox : Box => IO ()
-  // printBox = putStr . render
+  def printBox : Box => Unit = 
+    box => println(render(box))
 
 }
