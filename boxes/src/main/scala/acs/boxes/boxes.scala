@@ -181,6 +181,7 @@ object Boxes {
   def hsep: Int => Alignment => List[Box] => Box =
     sep => a => bs => punctuateH(a)(emptyBox(0)(sep))(bs)
 
+
   // -- | Glue a list of boxes together vertically, with the given alignment.
   // vcat :: Alignment -> [Box] -> Box
   // vcat a bs = Box h w (Col $ map (alignHoriz a w) bs)
@@ -290,7 +291,6 @@ object Boxes {
   case class Block(fullLines : List[Line], lastLine  : Line) extends ParaContent
   val fullLines: Lens[Block, List[Line]] = Lens(_.fullLines, (obj, v) => obj copy (fullLines = v))
   val lastLine: Lens[Block, Line] = Lens(_.lastLine, (obj, v) => obj copy (lastLine = v))
-  
 
   // emptyPara :: Int -> Para
   // emptyPara pw = Para pw (Block [] (Line 0 []))
