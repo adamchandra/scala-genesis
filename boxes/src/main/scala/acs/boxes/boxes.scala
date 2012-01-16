@@ -29,29 +29,33 @@ object Boxes {
     // --   alignment.
     // (<>) :: Box -> Box -> Box
     // l <> r = hcat top [l,r]
-    def <> : Box => Box = 
-      r => hcat(top) (this :: r :: nil)
+    def <> : Box => Box = beside
+    def beside : Box => Box = 
+      r => hcat(top) (List(this,r))
 
     // -- | Paste two boxes together horizontally with a single intervening
     // --   column of space, using a default (top) alignment.
     // (<+>) :: Box -> Box -> Box
     // l <+> r = hcat top [l, emptyBox 0 1, r]
-    def <+> : Box => Box = 
+    def <+> : Box => Box = besideS
+    def besideS: Box => Box = 
       r => hcat(top)(List(this, emptyBox(0)(1), r))
 
     // -- | Paste two boxes together vertically, using a default (left)
     // --   alignment.
     // (\/\/) :: Box -> Box -> Box
     // t \/\/ b = vcat left [t,b]
-    def <-> : Box => Box = 
-      b => vcat(left)(List(this,b))
+    def <-> : Box => Box = atop
+    def atop(b: Box): Box = 
+      vcat(left)(List(this,b))
 
 
     // -- | Paste two boxes together vertically with a single intervening row
     // --   of space, using a default (left) alignment.
     // (/+/) :: Box -> Box -> Box
     // t /+/ b = vcat left [t, emptyBox 1 0, b]
-    def <=> : Box => Box = 
+    def <=> : Box => Box = atopS
+    def atopS : Box => Box = 
       b => vcat(left)(List(this,emptyBox(1)(0), b))
   }
 
@@ -157,7 +161,6 @@ object Boxes {
     s => Box(1, s.length, Text(s))
 
 
-
   // -- | Glue a list of boxes together horizontally, with the given alignment.
   // hcat :: Alignment -> [Box] -> Box
   // hcat a bs = Box h w (Row $ map (alignVert a h) bs)
@@ -165,8 +168,8 @@ object Boxes {
   //         w = sum . map cols $ bs
   def hcat: Alignment => List[Box] => Box =
     a => bs => {
-      def h = (bs ∘ (_.rows)).max
-      def w = (bs ∘ (_.cols)).collapse
+      def h = (0 :: (bs ∘ (_.rows))) max
+      def w = (bs ∘ (_.cols)) sum
       val aligned = alignVert(a)(h)
       Box(h, w, Row(bs ∘ aligned))
     }
@@ -185,9 +188,9 @@ object Boxes {
   //         w = maximum . (0:) . map cols $ bs
   def vcat: Alignment => List[Box] => Box =
     a => bs => {
-      def h = (bs ∘ (_.rows)).max
-      def w = (bs ∘ (_.cols)).collapse
-      val aligned = alignHoriz(a)(h)
+      def h = (bs ∘ (_.rows)).sum
+      def w = (0 :: (bs ∘ (_.cols))) max
+      val aligned = alignHoriz(a)(w)
       Box(h, w, Col(bs ∘ aligned))
     }
 
@@ -226,6 +229,8 @@ object Boxes {
   def para: Alignment => Int => String => Box = 
     a => n => t => 
       flow(n)(t) |> (ss => mkParaBox(a) (ss.length) (ss))
+      // ((ss:List[String]) => mkParaBox(a) (ss.length) (ss)) (flow(n)(t))
+
 
 
   // -- | @columns w h t@ is a list of boxes, each of width @w@ and height
@@ -254,12 +259,20 @@ object Boxes {
   //          . getLines
   //          $ foldl' addWordP (emptyPara n) (map mkWord . words $ t)
 
+  def flow2 : Int => String => List[String] = 
+    n => t => {
+      val wrds = words(t) ∘ mkWord
+      val para = wrds.foldl (emptyPara(n)) (addWordP)
+      para |> getLines |> (_.map(_.take(n)))
+    }
+
   def flow : Int => String => List[String] = 
     n => t => {
       val wrds = words(t) ∘ mkWord
       val para = wrds.foldl (emptyPara(n)) { addWordP }
       para |> getLines |> (_.map(_.take(n)))
     }
+
 
 
   // data Para = Para { paraWidth   :: Int
@@ -439,7 +452,7 @@ object Boxes {
   // render : Box -> String
   // render = unlines . renderBox
   def render : Box => String = 
-    renderBox ∘ (_.mkString("\n")) 
+    b => renderBox(b) |> (_.mkString("\n")) 
 
   // -- XXX make QC properties for takeP
 
@@ -512,11 +525,6 @@ object Boxes {
   // renderBox : Box -> [String]
   // renderBox (Box r c Blank)            = resizeBox r c [""]
   // renderBox (Box r c (Text t))         = resizeBox r c [t]
-  // renderBox (Box r c (Row bs))         = resizeBox r c
-  //                                        . merge
-  //                                        . map (renderBoxWithRows r)
-  //                                        $ bs
-  //                            where merge = foldr (zipWith (++)) (repeat [])
   // 
   // renderBox (Box r c (Col bs))         = resizeBox r c
   //                                        . concatMap (renderBoxWithCols c)
@@ -525,26 +533,26 @@ object Boxes {
   // renderBox (Box r c (SubBox ha va b)) = resizeBoxAligned r c ha va
   //                                        . renderBox
   //                                        $ b
+  // renderBox (Box r c (Row bs))         = resizeBox r c
+  //                                        . merge
+  //                                        . map (renderBoxWithRows r)
+  //                                        $ bs
+  //                                      where merge = foldr (zipWith (++)) (repeat [])
 
   def renderBox : Box => List[String] = 
     box => box match {
-      case Box(r, c, Blank)           => resizeBox(r, c, List(""))
-      case Box(r, c, Text(t))         => resizeBox(r, c, List(t))
-      case Box(r, c, Row(bs))         => {
+      case Box(r, c, Blank)             => resizeBox(r, c, List("")) 
+      case Box(r, c, Text(t))           => resizeBox(r, c, List(t))
+      case Box(r, c, Col(bs))           => (bs >>= renderBoxWithCols(c)) |> (resizeBox(r, c, _))
+      case Box(r, c, SubBox(ha, va, b)) => resizeBoxAligned(r, c, ha, va)(renderBox(b))
+      case Box(r, c, Row(bs))           => {
         def merge: List[List[String]] => List[String] = 
-          sss => sss.foldr("".repeat[List]) {
-            // case (a:List[String], b:List[String]) => 
-            // ((_:List[String]) zip (_:List[String])) ∘ {case (x, y) => x+y}
-            case (a, b) => (a zip b) map {case (x, y) => x+y}
-          }
-        bs ∘ renderBoxWithRows(r) |> merge ∘ (b => resizeBox(r, c, b))
+          sss => sss.foldr("".repeat[Stream]) ({
+            case (a, b) => (a.toStream zip b) map {case (x, y) => x+y}
+          }).toList
+        bs ∘ renderBoxWithRows(r) |> merge |> (resizeBox(r, c, _))
       }
-      case Box(r, c, Col(bs))         => 
-        bs >>= (renderBoxWithCols(c) ∘ (b => resizeBox(r, c, b)))
-      case Box(r, c, SubBox(ha, va, b)) => 
-        resizeBoxAligned(r, c, ha, va)(renderBox(b))
     }
-
 
 
   // -- | Render a box as a list of lines, using a given number of rows.
